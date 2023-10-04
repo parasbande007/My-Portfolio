@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2295a37a8a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./images/IMG_20230929_211620.png.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+
+
+            </nav>
+            <div class="header-text">
+                <p>My Portfolio</p>
+                <h1>Hi, I'm <span>Paras</span> Bande </h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                     <h1 class="sub-title">About Me</h1>
+                     <p>I'm a Computer Engineering student with a passion for coding and technology. I thrive on solving complex problems and staying updated with the latest tech trends. I'm a team player who enjoys collaborating and aspires to make a meaningful impact in the tech world.</p>
+
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                     </div>
+                     <div class="tab-contents active-tab " id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Frontend Development</li>
+                            <li><span>Programming Language</span><br>Java & Python</li>
+                            <li><span>DSML</span><br>Data Science and Machine Learning</li>
+                        </ul>
+                     </div>
+
+                     <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Content Creator</span><br>Worked as Content Creator for EDC Cell</li>
+                            <li><span>Organized E-Summit</span><br>Was in the organizing team of Vishwapreneur'23</li>
+                            <li><span>Infobyte Internship</span><br>Completed Web Development Internship</li>
+                            
+                        </ul>
+                     </div>
+
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>SSC</span><br>PIS, Parbhani</li>
+                            <li><span>HSC</span><br>Narayana College, Aurangabad</li>
+                            <li><span>Btech. Computer Engineering</span><br>VIIT ,Pune</li>
+                            
+                        </ul>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!------------------services------------------->   
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>I have accomplished the development of several frontend web design projects, encompassing the design and implementation of my portfolio website and various other web platforms.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-brands fa-python"></i>
+                <h2>Python Project</h2>
+                <p>I've developed projects in Python, including the creation of a Python-based game titled 'Platformer.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-mobile"></i>
+                <h2>ML Project</h2>
+                <p>I've completed machine learning projects, and one of them is called 'Personalized Learning,' which specifically targets smart education.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------------------------Contacts------------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>parasbande@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>9563214596</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/paras_bande03?utm_source=qr&igshid=YzU1NGVlODEzOA%3D%3D"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/parasbande007"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://twitter.com/Parasbande03?t=bpbT3-t87qiTXuA0WXvUuA&s=09"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/paras-bande-06720222a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="images/Resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Paras Bande. </p>
+    </div>
+</div>
+
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = 0;
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbywljb0HOmMkfS2EIJQEhpfPQmXBbW1U4FQ0hPW77BqJU-8FbKiIADdpIj5yfFlLF5W/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                mas.innerHTML = ""
+            },3000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    
+</body>
+</html>
